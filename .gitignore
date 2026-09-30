@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+env/
+.DS_Store
+*.log
+news_*_scrapes.csv
+news_*_checkpoint.csv
+news_*_fulltext.csv
+news_*_resolved.csv
+scratch/

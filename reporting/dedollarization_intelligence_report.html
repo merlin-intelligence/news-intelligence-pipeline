@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Merlin Intelligence — De-Dollarization Macro Intelligence Report: Onto-Semantic Signals, Empirical Indicators & Quantitative Portfolio Synthesis.">
+<title>Merlin Intelligence — De-Dollarization Macro Intelligence Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:         #F0ECE6;
+  --ink:        #14120F;
+  --gold:       #A27844;
+  --rule:       #C3B9AC;
+  --light:      #8A7F74;
+  --pale:       #F7F4F0;
+  --dark:       #1E1A16;
+  --accent:     #8C2A1C;
+  --slate:      #3E4B4A;
+  --slate-pale: #E7ECEA;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: 'Lora', Georgia, serif; font-size: 17px; line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap       { max-width: 820px; margin: 0 auto; padding: 0 2rem; }
+.wrap--wide { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+nav { padding: 1.2rem 0 1.0rem; border-bottom: 0.5px solid var(--rule); }
+nav .wrap--wide { display: flex; align-items: center; justify-content: space-between; }
+.nav-brand {
+  font-family: 'Space Mono', monospace; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; color: var(--ink); text-decoration: none; text-transform: uppercase;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.nav-logo {
+  height: 38px; width: 38px; object-fit: cover; display: block;
+  border: 0.5px solid var(--rule); border-radius: 50%; padding: 2px; background: var(--pale);
+}
+.nav-sub { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--light); letter-spacing: 0.04em; }
+
+.hero { padding: 4.5rem 0 3.5rem; position: relative; overflow: hidden; }
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(-62deg, transparent, transparent 80px, rgba(162,120,68,0.055) 80px, rgba(162,120,68,0.055) 80.5px);
+  pointer-events: none;
+}
+.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--gold); letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 1.2rem; display: block; }
+.hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 400; line-height: 1.14; color: var(--ink); margin-bottom: 1.2rem; max-width: 860px; }
+.hero-headline em { font-style: italic; color: var(--gold); }
+.hero-sub { font-size: 1.05rem; color: var(--light); max-width: 720px; line-height: 1.65; margin-bottom: 2.2rem; }
+
+.hero-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+  border-top: 0.5px solid var(--rule); padding-top: 2.0rem; margin-top: 1.5rem;
+}
+.stat-item { border-left: 2px solid var(--gold); padding-left: 1.0rem; }
+.stat-val { font-family: 'Space Mono', monospace; font-size: 1.6rem; font-weight: 700; color: var(--ink); display: block; line-height: 1.2; }
+.stat-lbl { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--light); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.3rem; display: block; }
+
+@media (max-width: 768px) {
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+}
+
+main { padding: 3.5rem 0; }
+section { margin-bottom: 4.5rem; }
+.sec-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--gold); letter-spacing: 0.10em; text-transform: uppercase; display: block; margin-bottom: 0.6rem; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 1.85rem; font-weight: 400; color: var(--ink); margin-bottom: 0.8rem; line-height: 1.25; }
+.section-title em { font-style: italic; color: var(--gold); }
+.section-intro { font-size: 0.96rem; color: var(--light); max-width: 780px; margin-bottom: 2.0rem; line-height: 1.65; }
+
+/* Pipeline Architecture Grid */
+.pipeline-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin: 2.0rem 0; }
+.pipeline-card { border: 0.5px solid var(--rule); background: var(--pale); padding: 1.4rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+.pipeline-step { font-family: 'Space Mono', monospace; font-size: 0.65rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; display: block; }
+.pipeline-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; line-height: 1.3; }
+.pipeline-desc { font-size: 0.82rem; color: var(--light); line-height: 1.5; }
+@media (max-width: 900px) { .pipeline-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .pipeline-grid { grid-template-columns: 1fr; } }
+
+/* Macro Regime Cards */
+.macro-section { display: flex; flex-direction: column; gap: 2.2rem; margin: 2.0rem 0; }
+.macro-card { border: 0.5px solid var(--rule); background: var(--pale); padding: 2.2rem; }
+.macro-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.5rem; }
+.macro-title { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 600; color: var(--ink); margin-bottom: 1.1rem; line-height: 1.3; }
+.macro-title em { font-style: italic; color: var(--gold); }
+.macro-body { font-size: 0.98rem; color: var(--ink); line-height: 1.74; }
+.macro-body p { margin-bottom: 1.1rem; }
+.macro-body p:last-child { margin-bottom: 0; }
+
+.callout-box { border-left: 3px solid var(--gold); background: var(--bg); padding: 1.1rem 1.4rem; margin: 1.3rem 0; font-size: 0.92rem; line-height: 1.65; }
+.callout-box strong { font-family: 'Space Mono', monospace; font-size: 0.65rem; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.3rem; letter-spacing: 0.05em; }
+
+.quant-box { border-left: 3px solid var(--slate); background: var(--slate-pale); padding: 1.3rem 1.5rem; margin: 1.4rem 0; }
+.quant-box .quant-label { font-family: 'Space Mono', monospace; font-size: 0.68rem; font-weight: 700; color: var(--slate); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.quant-box p { margin-bottom: 0.8rem; font-size: 0.94rem; line-height: 1.65; }
+.quant-box p:last-child { margin-bottom: 0; }
+
+/* Corroborating Intelligence / Selected News Box */
+.selected-news-box {
+  margin-top: 1.4rem;
+  background: var(--bg);
+  border: 0.5px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 1.1rem 1.4rem;
+}
+.selected-news-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.selected-news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0;
+  margin: 0;
+}
+.selected-news-item {
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.selected-news-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gold);
+  transition: color 0.15s ease;
+}
+.selected-news-link:hover {
+  color: var(--gold);
+}
+.selected-news-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.64rem;
+  color: var(--light);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* ETF Universe Color Grid */
+.etf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  margin: 1.5rem 0 1.6rem;
+}
+@media (max-width: 900px) { .etf-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .etf-grid { grid-template-columns: 1fr; } }
+
+.etf-card {
+  background: var(--bg);
+  border: 0.5px solid var(--rule);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.etf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.etf-ticker {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(20, 18, 15, 0.08);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2px;
+}
+.etf-alloc {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.70rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.etf-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+  line-height: 1.3;
+}
+.etf-desc {
+  font-size: 0.82rem;
+  line-height: 1.52;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Taxonomy Grid */
+.taxonomy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1.8rem 0; }
+.taxonomy-card { border: 0.5px solid var(--rule); background: var(--pale); padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; }
+.tax-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+.tax-badge { font-family: 'Space Mono', monospace; font-size: 0.65rem; font-weight: 700; background: var(--ink); color: var(--bg); padding: 0.15rem 0.5rem; }
+.tax-count { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--gold); }
+.tax-title { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3; }
+.tax-desc { font-size: 0.80rem; color: var(--light); line-height: 1.45; margin: 0; }
+
+@media (max-width: 900px) { .taxonomy-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .taxonomy-grid { grid-template-columns: 1fr; } }
+
+/* News Cards */
+.news-cards { display: flex; flex-direction: column; gap: 1.8rem; margin-top: 1.8rem; }
+.news-card { border: 0.5px solid var(--rule); background: var(--pale); padding: 1.8rem; position: relative; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.news-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20,18,15,0.04); }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.8rem; margin-bottom: 0.9rem; flex-wrap: wrap; }
+.card-badges { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.badge-date { font-family: 'Space Mono', monospace; font-size: 0.70rem; font-weight: 700; background: var(--ink); color: var(--bg); padding: 0.25rem 0.60rem; }
+.badge-bucket { font-family: 'Space Mono', monospace; font-size: 0.62rem; background: rgba(162,120,68,0.12); color: var(--ink); padding: 0.2rem 0.55rem; border: 0.5px solid rgba(162,120,68,0.3); font-weight: 700; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 1.30rem; font-weight: 600; line-height: 1.3; color: var(--ink); margin-bottom: 0.7rem; }
+.card-title a { color: var(--ink); text-decoration: none; border-bottom: 1px dashed var(--gold); }
+.card-title a:hover { color: var(--gold); }
+.card-meta { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--light); margin-bottom: 0.8rem; display: block; }
+
+.country-tags-wrap { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.0rem; align-items: center; }
+.country-label { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-right: 0.2rem; }
+.country-tag { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--ink); background: var(--bg); border: 0.5px solid var(--rule); padding: 0.12rem 0.45rem; border-radius: 2px; }
+
+.card-summary { font-size: 0.94rem; color: var(--ink); line-height: 1.65; margin-bottom: 1.1rem; }
+.card-mechanism { border-left: 2.5px solid var(--gold); padding: 0.75rem 1rem; background: var(--bg); font-size: 0.88rem; color: var(--ink); line-height: 1.6; }
+.card-mechanism strong { font-family: 'Space Mono', monospace; font-size: 0.65rem; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.25rem; letter-spacing: 0.05em; }
+
+/* Table */
+.table-wrap { overflow-x: auto; margin-top: 1.8rem; border: 0.5px solid var(--rule); }
+table { width: 100%; border-collapse: collapse; background: var(--pale); font-size: 0.88rem; text-align: left; }
+th { font-family: 'Space Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gold); padding: 0.9rem 0.85rem; border-bottom: 1px solid var(--rule); background: var(--bg); }
+td { padding: 0.85rem; border-bottom: 0.5px solid var(--rule); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+tr:hover { background: rgba(162,120,68,0.04); }
+.td-date { font-family: 'Space Mono', monospace; font-weight: 700; color: var(--ink); width: 110px; }
+.td-bucket { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--light); width: 160px; }
+.td-countries { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--ink); width: 180px; }
+.td-title { font-family: 'Playfair Display', serif; font-size: 0.96rem; color: var(--ink); }
+.td-title a { color: var(--ink); text-decoration: none; }
+.td-title a:hover { color: var(--gold); text-decoration: underline; }
+
+footer { padding: 2.5rem 0; border-top: 0.5px solid var(--rule); margin-top: 3.5rem; font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--light); }
+footer .wrap--wide { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap--wide">
+    <a href="#" class="nav-brand">
+      <img src="MI-icon.png" alt="Merlin Intelligence" class="nav-logo" onerror="this.style.display='none'">
+      <span>Merlin Intelligence — De-Dollarization Intelligence</span>
+    </a>
+    <span class="nav-sub">Geoeconomic Signal Intelligence & Macro Synthesis • September 2026</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap--wide">
+    <span class="hero-eyebrow">Geoeconomic Signal Intelligence & Macro Synthesis</span>
+    <h1 class="hero-headline">De-Dollarization Signals: <em>Macro Intelligence & Empirical Indicators</em></h1>
+    <p class="hero-sub">
+      Comprehensive intelligence evaluation of 838 clean full-text news articles across 12 empirical indicator categories, synthesizing onto-semantic signals with quantitative macro portfolio dynamics.
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-val">838</span><span class="stat-lbl">Clean Full-Text Articles</span></div>
+      <div class="stat-item"><span class="stat-val">12</span><span class="stat-lbl">Indicator Buckets Covered</span></div>
+      <div class="stat-item"><span class="stat-val">20</span><span class="stat-lbl">Priority Focus Intelligence</span></div>
+      <div class="stat-item"><span class="stat-val">50</span><span class="stat-lbl">Extended Coverage Articles</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap--wide">
+
+  <!-- SECTION 01: PIPELINE ARCHITECTURE -->
+  <section id="pipeline">
+    <span class="sec-label">01. Intelligence Pipeline Architecture</span>
+    <h2 class="section-title">From Onto-Graph to Seeds, Signals, and News Bucketing</h2>
+    <p class="section-intro">
+      The Merlin Intelligence news analysis engine operates on an end-to-end onto-semantic architecture. Rather than relying on simple keyword scraping or ungrounded summaries, the pipeline enforces formal semantic constraints from knowledge representation down to individual news classification:
+    </p>
+
+    <div class="pipeline-grid">
+      <div class="pipeline-card">
+        <div>
+          <span class="pipeline-step">Phase 01 // Ontology</span>
+          <h3 class="pipeline-title">The Onto-Semantic Graph</h3>
+          <p class="pipeline-desc">
+            Constructing a formal directed knowledge graph mapping global monetary actors (central banks, sovereign wealth funds), institutional standards (IMF COFER, SWIFT messaging, BIS OTC turnover), market mechanisms (CIP deviations, Treasury convenience yields, swap spreads), and alternative transaction rails (CIPS, mBridge, multi-CBDC corridors, stablecoins).
+          </p>
+        </div>
+      </div>
+
+      <div class="pipeline-card">
+        <div>
+          <span class="pipeline-step">Phase 02 // Taxonomy</span>
+          <h3 class="pipeline-title">Algorithmic Seed Generation</h3>
+          <p class="pipeline-desc">
+            Projecting topological graph centrality hubs and cross-boundary bridge nodes into a curated taxonomy of 100 domain-specific search query seeds across 12 empirical indicator buckets. Seeds target specific monetary mechanics (e.g., Panda bond debuts, non-SWIFT messaging, Treasury auction tailing) rather than generic media noise.
+          </p>
+        </div>
+      </div>
+
+      <div class="pipeline-card">
+        <div>
+          <span class="pipeline-step">Phase 03 // Harvesting</span>
+          <h3 class="pipeline-title">Harvesting & Canonical Resolution</h3>
+          <p class="pipeline-desc">
+            Querying Google News RSS feeds across multi-week lookback windows, resolving raw URLs to canonical publisher links via Brave Search APIs to eliminate aggregator redirects, and deploying concurrent headless Chromium Playwright workers to extract clean, un-gated full-text journalistic content.
+          </p>
+        </div>
+      </div>
+
+      <div class="pipeline-card">
+        <div>
+          <span class="pipeline-step">Phase 04 // Immersion</span>
+          <h3 class="pipeline-title">Multi-Anchor Concept Bucketing</h3>
+          <p class="pipeline-desc">
+            Vectorizing clean full texts and computing high-dimensional similarity against the multi-anchor semantic descriptors of the 12 empirical indicator buckets. Each article is assigned to its dominant category based on concept immersion, guaranteeing continuous calibration across all dimensions of monetary realignment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: MACRO OBSERVATIONS -->
+  <section id="macro-observations">
+    <span class="sec-label">02. Macro Regime Observations</span>
+    <h2 class="section-title">Empirical Signals & Model Observations</h2>
+    <p class="section-intro">
+      Synthesizing real-world news signals harvested across September 2026 with the empirical findings of our 9-Asset Walk-Forward Portfolio K-Max strategy reveals profound structural shifts across energy, sovereign debt, foreign exchange reserves, and global macro portfolio allocations:
+    </p>
+
+    <div class="macro-section">
+
+      <!-- SUBSECTION 1: ENERGY & DOLLAR -->
+      <article class="macro-card">
+        <span class="macro-eyebrow">Macro Observation · 01</span>
+        <h3 class="macro-title">Interactions Between Energy Prices and Dollar Dynamics</h3>
+        <div class="macro-body">
+          <p>
+            The escalation of geopolitical friction in the Persian Gulf and maritime interdictions around the Strait of Hormuz have injected sharp risk premia into global crude oil and liquefied natural gas (LNG) markets. Historically, energy supply shocks triggered an automatic, mechanical surge in structural demand for U.S. dollars through the mandatory petrodollar invoicing framework established in 1974, followed by the predictable recycling of petrodollars into U.S. Treasuries.
+          </p>
+          <p>
+            Today, that structural transmission mechanism is breaking down. Major oil exporters and importers—spanning Saudi Arabia, the UAE, Iran, Russia, China, and India—are aggressively deploying non-dollar settlement corridors. Hydrocarbon transactions are increasingly cleared directly in renminbi (the petroyuan), UAE dirhams, and local currencies, bypassing traditional New York correspondent clearing banks and SWIFT rails.
+          </p>
+          <p>
+            Consequently, rising energy prices no longer drive structural foreign accumulation of U.S. Treasuries. Instead, energy inflation functions as an un-hedged terms-of-trade shock against Western economies, expanding trade deficits and driving domestic import inflation, while Eurasian energy trade loops become self-contained, insulated from U.S. dollar liquidity constraints.
+          </p>
+
+          <div class="selected-news-box">
+            <span class="selected-news-label">Corroborating Intelligence · Selected News</span>
+            <ul class="selected-news-list">
+              <li class="selected-news-item">
+                <a href="https://energy.economictimes.indiatimes.com/news/oil-and-gas/oil-trades-shift-towards-a-currency-agnostic-future/133903259" target="_blank" rel="noopener" class="selected-news-link">Oil trade’s shift towards a currency-agnostic future</a>
+                <span class="selected-news-meta">ET EnergyWorld • September 08, 2026 • Petroyuan expansion, bilateral crude clearing & bypass of SWIFT rails</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://fortune.com/2026/09/11/oil-prices-hormuz-diplomacy-saudi-arabia-houthis-pakistan-us-bab-al-mandab/" target="_blank" rel="noopener" class="selected-news-link">Oil prices dive on signs of Hormuz diplomacy while Saudi Arabia is left hanging in fight vs. Houthis</a>
+                <span class="selected-news-meta">Fortune • September 11, 2026 • Persian Gulf maritime bottlenecks, Bab al-Mandab security & geopolitical crude risk premia</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://www.europesays.com/3233377/" target="_blank" rel="noopener" class="selected-news-link">US-Iran Conflict Reignites as Hedge Funds Push Crude Oil Bullish Bets to Highest Since May</a>
+                <span class="selected-news-meta">BigGo Finance / EuropeSays • September 04, 2026 • Geopolitical crude supply shocks & speculative energy positioning</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SUBSECTION 2: GLOBAL BONDS SELL-OFF -->
+      <article class="macro-card">
+        <span class="macro-eyebrow">Macro Observation · 02</span>
+        <h3 class="macro-title">Global Bonds Sell-Off and Spiking Interest Rates</h3>
+        <div class="macro-body">
+          <p>
+            Sovereign debt markets across G7 economies are experiencing severe duration repricing and yield curve steepening. The U.S. 10-year Treasury yield surged toward 4.86% (3-year highs), while the 30-year bond breached 5.30%—its highest level in 19 years. Concurrently, European government bond yields have pushed higher, undermining traditional fixed-income capital preservation assumptions.
+          </p>
+          <p>
+            In a pivotal warning published in early September 2026, European Central Bank (ECB) economists highlighted an unprecedented crowding-out dynamic: a massive bonanza of bond sales by U.S. mega-cap technology giants is absorbing global institutional fixed-income demand, pulling capital directly away from European sovereign debt and driving up public borrowing costs across the Eurozone. When high-yielding U.S. corporate balance sheets compete for long-term duration capital, sovereign issuers lose their historic yield insulation.
+          </p>
+          <p>
+            This duration sell-off was compounded on September 9, 2026, when the U.S. Treasury under Secretary Scott Bessent conducted its first debt buyback operation. Offering a modest $6 billion against Wall Street expectations of $8–10 billion, the cosmetic intervention backfired, triggering an aggressive yield spike as primary dealers realized that official debt repurchase capacity cannot keep pace with multi-trillion-dollar federal deficits. The structural compression of the Treasury "convenience yield" and persistent deeply negative interest rate swap spreads confirm that sovereign debt is no longer treated as pristine, unassailable safe-haven ballast.
+          </p>
+
+          <div class="selected-news-box">
+            <span class="selected-news-label">Corroborating Intelligence · Selected News</span>
+            <ul class="selected-news-list">
+              <li class="selected-news-item">
+                <a href="https://www.euractiv.com/news/us-tech-bond-bonanza-could-raise-european-borrowing-costs-say-ecb-analysts/" target="_blank" rel="noopener" class="selected-news-link">US tech bond bonanza could raise European borrowing costs, say ECB analysts</a>
+                <span class="selected-news-meta">Euractiv • September 01, 2026 • Mega-cap US corporate debt crowding out European sovereign debt demand</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://www.tradingview.com/news/stocktwits:951f65fe9094b:0-the-weekly-spread-what-shaped-yields-and-the-dollar-this-week/" target="_blank" rel="noopener" class="selected-news-link">The Weekly Spread: What Shaped Yields And The Dollar This Week</a>
+                <span class="selected-news-meta">TradingView • September 19, 2026 • G7 duration steepening, swap spread compression & Treasury convenience yield erosion</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SUBSECTION 3: 20-YEAR AUCTION HISTORIC DEGRADATION -->
+      <article class="macro-card">
+        <span class="macro-eyebrow">Macro Observation · 03</span>
+        <h3 class="macro-title">Historic Demand Degradation in the U.S. Treasury's September 20-Year Auction</h3>
+        <div class="macro-body">
+          <div class="callout-box">
+            <strong>Key Empirical Observation</strong>
+            The U.S. Treasury's September 20-year bond auction experienced historic demand degradation, with primary dealers forced to absorb an unusually large share as foreign indirect bidder participation declined sharply, causing a substantial auction tail.
+          </div>
+          <p>
+            On Wednesday, September 16, 2026, the U.S. Treasury conducted its scheduled 20-year sovereign bond auction, which resulted in the worst demand showing in the security’s history. Foreign indirect bidders—the primary proxy for foreign central banks, sovereign wealth funds, and international institutional reserve managers—withdrew significantly from the bidding book.
+          </p>
+          <p>
+            Faced with an acute absence of foreign sponsor appetite, primary dealers were forced to warehouse an abnormally large percentage of the issued paper. The auction cleared with a dramatic tail above the pre-auction when-issued yield, signaling severe dealer balance sheet indigestion. This auction failure represents concrete empirical evidence that international sovereign allocators are unwilling to finance expanding U.S. fiscal deficits at the long end of the curve without substantial concession premiums, validating our model's structural penalization of long-duration paper.
+          </p>
+
+          <div class="selected-news-box">
+            <span class="selected-news-label">Corroborating Intelligence · Selected News</span>
+            <ul class="selected-news-list">
+              <li class="selected-news-item">
+                <a href="https://protos.com/us-20-year-bond-auction-just-had-its-worst-showing-ever/" target="_blank" rel="noopener" class="selected-news-link">US 20-year bond auction just had its worst showing ever</a>
+                <span class="selected-news-meta">Protos / Cryptonews.net • September 16, 2026 • Historic auction tail, primary dealer balance-sheet indigestion & foreign buyer retreat</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://wolfstreet.com/2026/09/15/some-thoughts-on-the-5-42-yield-at-the-20-year-treasury-auction-bond-market-bloodbath-continues/" target="_blank" rel="noopener" class="selected-news-link">U.S. Treasury's $13 Billion 20-Year Bond Auction Yields Record 5.42%; 10-Year Tops 5% for First Time Since 2007</a>
+                <span class="selected-news-meta">Wolf Street / BigGo Finance • September 16, 2026 • Long-duration sovereign bond supply overload & foreign central bank buyer strike</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SUBSECTION 4: DE-RESERVIFICATION, NOT DE-DOLLARIZATION -->
+      <article class="macro-card">
+        <span class="macro-eyebrow">Macro Observation · 04</span>
+        <h3 class="macro-title">De-Reservification, Not De-Dollarization</h3>
+        <div class="macro-body">
+          <p>
+            A persistent conceptual error in financial discourse is conflating the U.S. dollar's role as a transactional clearing currency with its role as a permanent sovereign reserve anchor. As articulated by Brad Setser (Council on Foreign Relations) and corroborated by recent Federal Reserve Bank of New York research, the global economy is not abruptly abandoning the dollar for daily trade settlement. In foreign exchange turnover, trade invoicing, and SWIFT messaging, the dollar remains the undisputed operational medium of exchange.
+          </p>
+          <p>
+            What is underway is a calculated, structural process of <strong>De-reservification</strong>: sovereign central banks and monetary authorities are systematically curtailing their long-term foreign exchange exposure to freezeable, debt-monetized G7 sovereign paper. Following the precedent of Western central bank asset freezes in 2022, sovereign reserve managers recognize that holding excess wealth in U.S. Treasuries carries existential counterparty and geopolitical risk.
+          </p>
+          <p>
+            Consequently, sovereign balance sheets are executing an aggressive asset substitution into un-freezable, un-encumbered physical assets—foremost among them, physical gold bullion:
+          </p>
+          <ul style="margin: 0.8rem 0 1.2rem 1.6rem; font-size: 0.95rem; line-height: 1.65;">
+            <li><strong>Sovereign Vault Repatriation:</strong> The Dutch Central Bank (DNB) formally transferred sovereign gold to domestic military vaults, affirming that when multilateral paper guarantees fail, physical bullion is the ultimate monetary anchor.</li>
+            <li><strong>Uninterrupted Official Accumulation:</strong> The People's Bank of China (PBoC) expanded its physical gold holdings for 22 consecutive months, lifting official bullion reserves to 2,366 metric tons (76.73 million ounces).</li>
+            <li><strong>Institutional Reallocation Intent:</strong> Global central bank surveys indicate that 45% of monetary authorities plan to expand gold reserves over the next 12 to 36 months, allowing maturing Treasury tranches to expire without reinvestment.</li>
+          </ul>
+
+          <div class="selected-news-box">
+            <span class="selected-news-label">Corroborating Intelligence · Selected News</span>
+            <ul class="selected-news-list">
+              <li class="selected-news-item">
+                <a href="https://www.europesays.com/3239271/" target="_blank" rel="noopener" class="selected-news-link">Dollar's declining reserve share reflects few countries' choices, not global shift, NY Fed says</a>
+                <span class="selected-news-meta">Federal Reserve Bank of NY / EuropeSays • September 08, 2026 • Transactional clearing medium vs. sovereign reserve asset allocation dichotomy</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://goldsilver.com/industry-news/goldsilver-news/pboc-gold-reserves-august-2026-22-months/" target="_blank" rel="noopener" class="selected-news-link">China Just Broke Its Own Gold-Buying Record. Then Broke It Again.</a>
+                <span class="selected-news-meta">GoldSilver • September 07, 2026 • PBoC official gold reserves reach 2,366 tons across 22 consecutive months of official bullion accumulation</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://www.cointribune.com/en/china-holds-2366-tons-of-gold-as-yuan-ambitions-grow" target="_blank" rel="noopener" class="selected-news-link">China Holds 2,366 Tons Of Gold As Yuan Ambitions Grow</a>
+                <span class="selected-news-meta">Cointribune • September 17, 2026 • Physical bullion reserves as an un-freezable sovereign balance sheet shield against dollar dominance</span>
+              </li>
+              <li class="selected-news-item">
+                <a href="https://www.inventiva.co.in/trends/where-the-worlds-gold-is-going-and-what-china-india-europe-and-america-know-about-the-next-financial-shock/" target="_blank" rel="noopener" class="selected-news-link">Where The World's Gold Is Going And What Central Banks Know About The Next Financial Shock</a>
+                <span class="selected-news-meta">Inventiva • September 17, 2026 • Sovereign vault repatriation, Western asset freezes & de-reservification trends across Eurasia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SUBSECTION 5: QUANT MACRO DYNAMICS (K-MAX) -->
+      <article class="macro-card">
+        <span class="macro-eyebrow">Macro Observation · 05</span>
+        <h3 class="macro-title">Quant Macro Dynamics: Capital Allocation to Dollar by Global Macro Players Remains Strong</h3>
+        <div class="macro-body">
+          <p>
+            The mathematical findings of our institutional research report, <em>Global Macro Expansion: Institutional Quantitative Evaluation of the 9-Asset Walk-Forward Portfolio K-Max Strategy (2018–2026)</em> (evaluating 2,063 live trading sessions across <code>SPY, GLD, UUP, TLT, IEF, LSHUX, DBC, EEM, MCHI</code>), provide rigorous mathematical validation for this dual-currency reality.
+          </p>
+          <p>
+            In the live target allocation heading into the current cycle (market close Friday, September 18, 2026), the proprietary Merlin Asset Allocation model maintains a commanding capital allocation in the U.S. dollar cash proxy (<code>UUP</code>) at <strong>+37.24% of total portfolio capital</strong> (historically averaging a <strong>33.66%</strong> mean capital weight over the trailing 3-year cycle).
+          </p>
+
+          <div class="quant-box">
+            <div class="quant-label">Systemic Capital Allocation & Balance Sheet Deployment</div>
+            <p>
+              At this macro intelligence stage, our analysis focuses primarily on <strong>strategic capital allocation</strong> across the portfolio's core asset classes. While detailed mathematical risk allocations (including Euler percentage risk contributions, covariance decompositions, and sensitivity profiles) are generated continuously by our engine and remain available for finer institutional analysis, capital allocation provides the most direct reflection of real-world balance sheet deployment:
+            </p>
+
+            <div class="callout-box" style="margin: 1.1rem 0; border-left: 3px solid var(--gold); background: var(--bg);">
+              <strong style="font-family: 'Space Mono', monospace; font-size: 0.68rem; text-transform: uppercase; color: var(--gold); letter-spacing: 0.06em; margin-bottom: 0.4rem; display: block;">
+                Quant-Attractivity of the Dollar: Primary Capital Anchor
+              </strong>
+              <p style="font-size: 0.94rem; line-height: 1.65; margin: 0; color: var(--ink);">
+                <strong>US Dollar Reserve as Primary Capital Anchor (<code>UUP</code>: +37.24% Capital, +3.14% %RC):</strong><br>
+                The US Dollar holding sits at <strong>37.24%</strong> of total capital. With global central banks navigating currency fragmentation and US cash yields remaining attractive, <code>UUP</code> provides stable carry without duration risk, dampening total portfolio volatility to an ultra-low <strong>3.45%</strong> annualized.
+              </p>
+            </div>
+
+            <p>
+              <strong>Cash & Sovereign Safe-Haven Core:</strong> The U.S. dollar cash proxy (<code>UUP</code>: <strong>37.24%</strong>), Intermediate Treasuries (<code>IEF</code>: <strong>16.56%</strong>), and Long Treasuries (<code>TLT</code>: <strong>13.65%</strong>) together command <strong>67.45% of the fund's total capital</strong>. This massive balance-sheet anchor insulates the fund against broad market liquidity freezes, successfully dampening annualized portfolio volatility to an institutional <strong>3.45%</strong>.
+            </p>
+            <p>
+              <strong>Real Assets & Compounding Growth:</strong> Growth capital is concentrated in <strong>Physical Gold (<code>GLD</code>: delivering 65.79% of total portfolio risk-adjusted compounding efficiency</strong>, +125.79% 3Y return), <strong>Broad Commodities (<code>DBC</code>: +18.50% capital</strong>, +18.90% 3Y return) to hedge Middle Eastern energy supply shocks and maritime choke points, and <strong>Large-Cap Equities (<code>SPY</code>: +19.71% capital</strong>, +54.67% 3Y return).
+            </p>
+            <p>
+              <strong>Tactical Factor Hedges:</strong> Disciplined short/hedged sleeves in active growth (<code>LSHUX</code>: <strong>-2.53%</strong>) and Chinese equities (<code>MCHI</code>: <strong>-2.44%</strong>) neutralize valuation crowding and regional balance-sheet restructuring.
+            </p>
+            <p style="font-size: 0.84rem; color: var(--light); font-style: italic; margin-top: 0.6rem;">
+              * Institutional Note: Granular Euler risk decompositions (%RC), asset beta profiles, and stress-test sensitivity matrices are available upon request for finer institutional risk due diligence.
+            </p>
+          </div>
+
+          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.18rem; margin: 1.8rem 0 0.8rem; color: var(--ink);">
+            The 9-Asset Investment Universe: Strategic Profiles & Macro Roles
+          </h4>
+          <p style="font-size: 0.92rem; color: var(--light); margin-bottom: 1.2rem;">
+            Each asset within the K-Max investment universe fulfills a distinct structural mandate across compounding, safe-haven liquidity, duration buffering, and factor hedging:
+          </p>
+
+          <div class="etf-grid">
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">SPY</span>
+                <span class="etf-alloc">+19.71% Capital</span>
+              </div>
+              <h5 class="etf-name">SPDR S&P 500 ETF Trust</h5>
+              <p class="etf-desc">
+                Core large-cap equity beta proxy (+54.67% 3Y return). Captures high-margin technological productivity and AI capex monetization of premier U.S. corporate balance sheets, disciplined by the model to harvest equity risk premia.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">GLD</span>
+                <span class="etf-alloc">Primary Compounding Driver</span>
+              </div>
+              <h5 class="etf-name">SPDR Gold Shares</h5>
+              <p class="etf-desc">
+                Physical gold bullion vaulted in London (+125.79% 3Y return). The strategy's primary compounding pillar, delivering 65.79% of total portfolio risk-adjusted compounding efficiency as central bank de-reservification accelerates.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">UUP</span>
+                <span class="etf-alloc">+37.24% Capital (+3.14% %RC)</span>
+              </div>
+              <h5 class="etf-name">Invesco DB US Dollar Index</h5>
+              <p class="etf-desc">
+                Primary Capital Anchor (37.24% capital). With global central banks navigating currency fragmentation and US cash yields remaining attractive, UUP provides stable carry without duration risk, dampening total portfolio volatility to an ultra-low 3.45% annualized.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">TLT</span>
+                <span class="etf-alloc">+13.65% Capital</span>
+              </div>
+              <h5 class="etf-name">iShares 20+ Year Treasury</h5>
+              <p class="etf-desc">
+                Ultra-long sovereign duration (~16.5-year duration; -14.36% 3Y return). Constrained and disciplined by the model due to expanding federal deficits, term-premium resurgence, and severe auction demand degradation.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">IEF</span>
+                <span class="etf-alloc">+16.56% Capital</span>
+              </div>
+              <h5 class="etf-name">iShares 7-10 Year Treasury</h5>
+              <p class="etf-desc">
+                Intermediate-term sovereign duration (~7.2-year duration; +4.12% 3Y return). Delivers positive carry yield and dependable safe-haven liquidity buffer without the acute convexity drawdowns inherent to the ultra-long curve.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">LSHUX</span>
+                <span class="etf-alloc">-2.53% Net Capital</span>
+              </div>
+              <h5 class="etf-name">Loomis Sayles Growth Sleeve</h5>
+              <p class="etf-desc">
+                Active large-cap growth factor sleeve, tactically shorted / hedged. Deployed by the model to isolate pure market beta, strip out excessive valuation multiples, and shield capital from tech-crowding momentum unwinds.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">DBC</span>
+                <span class="etf-alloc">+18.50% Capital</span>
+              </div>
+              <h5 class="etf-name">Invesco DB Commodity Index</h5>
+              <p class="etf-desc">
+                Diversified basket of 14 physical commodities across crude, metals, and agriculture (+18.90% 3Y return). Serves as the primary active inflation buffer to hedge Persian Gulf maritime blockades and terms-of-trade shocks.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">EEM</span>
+                <span class="etf-alloc">Decoupling Proxy</span>
+              </div>
+              <h5 class="etf-name">iShares MSCI Emerging Markets</h5>
+              <p class="etf-desc">
+                Broad emerging market equity exposure outside the G7 (+87.10% 3Y return). Captures sovereign trade reorganization, critical mineral exporters, and semiconductor manufacturing nodes across non-aligned trading corridors.
+              </p>
+            </div>
+
+            <div class="etf-card">
+              <div class="etf-header">
+                <span class="etf-ticker">MCHI</span>
+                <span class="etf-alloc">-2.44% Net Capital</span>
+              </div>
+              <h5 class="etf-name">iShares MSCI China ETF</h5>
+              <p class="etf-desc">
+                Comprehensive Chinese equity exposure, tactically hedged (-16.82% 3Y return). Balances bilateral trade frictions, property sector deleveraging, and deflation against asymmetric upside from state-directed liquidity.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            <strong>Institutional Takeaway:</strong> Global systematic macro players allocate heavily to the U.S. dollar not as a long-term speculative store of value, but as an indispensable <em>operational clearing liquidity and zero-beta collateral anchor</em>. Wealth preservation and compounding return generation have decisively decoupled into un-encumbered physical gold and geopolitical commodities, while the dollar provides the liquidity chassis upon which modern quantitative asset allocation operates.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SECTION 03: TAXONOMY OVERVIEW -->
+  <section id="categories">
+    <span class="sec-label">03. Indicator Categories Overview</span>
+    <h2 class="section-title">The 12 Empirical Indicator Categories</h2>
+    <p class="section-intro">
+      Each harvested piece of news is evaluated across the 12 empirical dimensions of systemic monetary realignment:
+    </p>
+
+    <div class="taxonomy-grid">
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 1.1</span>
+            <span class="tax-count">68 Articles</span>
+          </div>
+          <h3 class="tax-title">Foreign Exchange Reserve Composition (IMF COFER)</h3>
+          <p class="tax-desc">Tracking USD share trajectory, RMB/Euro reserve expansion, and non-traditional currency asset allocations.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 1.2</span>
+            <span class="tax-count">139 Articles</span>
+          </div>
+          <h3 class="tax-title">International Debt &amp; Sovereign Bond Denomination</h3>
+          <p class="tax-desc">Compression of USD debt share, Panda bond debuts (RMB), and Euro sovereign issuances.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 1.3</span>
+            <span class="tax-count">44 Articles</span>
+          </div>
+          <h3 class="tax-title">Global Trade Finance &amp; Payments Network (SWIFT &amp; BIS)</h3>
+          <p class="tax-desc">SWIFT messaging share shifts, OTC FX turnover contraction, and cross-border bank loan currency shares.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 1.4</span>
+            <span class="tax-count">68 Articles</span>
+          </div>
+          <h3 class="tax-title">Treasury Convenience Yield &amp; Swap Spread Compression</h3>
+          <p class="tax-desc">Negative convenience yield, deeply negative swap spreads, and sovereign safe-haven premium erosion.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 1.5</span>
+            <span class="tax-count">45 Articles</span>
+          </div>
+          <h3 class="tax-title">Trade Policy Shocks &amp; Tariff Threshold Dynamics</h3>
+          <p class="tax-desc">Tariff threshold switching dynamics and risk-off asset appreciation outside the U.S. dollar.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.1</span>
+            <span class="tax-count">135 Articles</span>
+          </div>
+          <h3 class="tax-title">Central Bank Physical Gold Accumulation</h3>
+          <p class="tax-desc">Record official gold purchases, un-freezable conflict hedging, and gold surpassing Treasuries in reserves.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.2</span>
+            <span class="tax-count">48 Articles</span>
+          </div>
+          <h3 class="tax-title">Alternative Clearing Rails (CIPS &amp; Project mBridge)</h3>
+          <p class="tax-desc">Cross-Border Interbank Payment System volume surges, non-SWIFT clearing, and multi-CBDC platforms.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.3</span>
+            <span class="tax-count">65 Articles</span>
+          </div>
+          <h3 class="tax-title">Commodity Invoicing &amp; &#x27;Petroyuan&#x27; Realignment</h3>
+          <p class="tax-desc">1974 Saudi petrodollar expiry, non-dollar crude/LNG pricing, and Hormuz transit fee settlement.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.4</span>
+            <span class="tax-count">104 Articles</span>
+          </div>
+          <h3 class="tax-title">Non-USD Stablecoins &amp; Digital Sovereign Assets</h3>
+          <p class="tax-desc">Non-USD stablecoins growth, digital yuan/euro P2P corridors, and tokenized commercial deposit disintermediation.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.5</span>
+            <span class="tax-count">24 Articles</span>
+          </div>
+          <h3 class="tax-title">Deviations from Covered Interest Parity (CIP) &amp; Auction Thinning</h3>
+          <p class="tax-desc">CIP breakdown, rising USD borrowing friction, and diminishing indirect bidder allocations in Treasury auctions.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.6</span>
+            <span class="tax-count">32 Articles</span>
+          </div>
+          <h3 class="tax-title">Bilateral Swap Networks &amp; Green RMB Bonds</h3>
+          <p class="tax-desc">Bilateral central bank currency swap facilities and green RMB bond benchmarks providing non-USD safe assets.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-card">
+        <div>
+          <div class="tax-header">
+            <span class="tax-badge">BUCKET 2.7</span>
+            <span class="tax-count">66 Articles</span>
+          </div>
+          <h3 class="tax-title">Institutional Credibility &amp; Central Bank Governance Cues</h3>
+          <p class="tax-desc">Federal Reserve independence cues, policy interference risks, and central bank governance trust.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 04: PRIORITY INTELLIGENCE (TOP 20) -->
+  <section id="top20">
+    <span class="sec-label">04. Priority Intelligence (Top 20 Curated News)</span>
+    <h2 class="section-title">Top 20 Priority News Articles: <em>Chronological Presentation & Structural Mechanisms</em></h2>
+    <p class="section-intro">
+      The 20 articles below guarantee complete representation across all 12 indicator categories. They link directly to their canonical publisher source URLs, presented chronologically starting with the <b>most recent publication date</b> down to earlier news:
+    </p>
+
+    <div class="news-cards">
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-21</span>
+            <span class="badge-bucket">BUCKET 2.4: Non-USD Stablecoins &amp; Digital Sovereign Assets</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 01 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://en.wikipedia.org/wiki/Digital_euro" target="_blank" rel="noopener">A big moment for the digital euro - The Economist</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-21 • Direct Source: <a href="https://en.wikipedia.org/wiki/Digital_euro" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://en.wikipedia.org/wiki/Digital_euro...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">Eurozone/EU</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> The European Central Bank advances the digital euro project toward implementation, creating a sovereign European retail and wholesale digital payment rail intended to safeguard monetary sovereignty, reduce reliance on US-based payment networks, and strengthen the euro's international role.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Non-USD Digital Sovereign Assets & Monetary Autonomy (Bucket 2.4):</b> Sovereign CBDC issuance provides a native digital clearing rail that eliminates dependency on foreign card schemes and private digital currencies.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-21</span>
+            <span class="badge-bucket">BUCKET 1.3: Global Trade Finance &amp; Payments Network (SWIFT &amp; BIS)</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 02 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://dailynews.co.tz/brics-builds-an-alternative-path-for-global-payments/" target="_blank" rel="noopener">BRICS builds an alternative path for global payments - dailynews.co.tz</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-21 • Direct Source: <a href="https://dailynews.co.tz/brics-builds-an-alternative-path-for-global-payments/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://dailynews.co.tz/brics-builds-an-alternative-path-for-global-payment...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Russia</span><span class="country-tag">India</span><span class="country-tag">Brazil</span><span class="country-tag">UAE</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> The 18th BRICS Summit in New Delhi formalized concrete frameworks for alternative payment architecture, including decentralized cross-border messaging protocols, local currency bilateral settlement, and clearing mechanisms independent of Western jurisdiction.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Global Trade Finance & Alternative Messaging Networks (Bucket 1.3 / 2.2):</b> Structural engineering of redundant financial messaging and cross-border settlement channels independent of SWIFT and CHIPS.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-20</span>
+            <span class="badge-bucket">BUCKET 2.7: Institutional Credibility &amp; Central Bank Governance Cues</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 03 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://cryptobriefing.com/levin-warns-blurred-monetary-policy-lines/" target="_blank" rel="noopener">Bloomberg’s Jonathan Levin warns of blurred lines in monetary policy - Crypto Briefing</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-20 • Direct Source: <a href="https://cryptobriefing.com/levin-warns-blurred-monetary-policy-lines/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://cryptobriefing.com/levin-warns-blurred-monetary-policy-lines/...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">United States</span><span class="country-tag">Brazil</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Financial analyst Jonathan Levin cautions that skyrocketing U.S. government debt is eroding the institutional boundary between central banks and finance ministries, threatening central bank independence and creating risks of fiscal dominance and debt monetization.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Institutional Credibility & Central Bank Governance Cues (Bucket 2.7):</b> Rising risks of fiscal dominance undermine global confidence in the Federal Reserve's institutional autonomy, eroding the dollar's institutional credibility premium.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-20</span>
+            <span class="badge-bucket">BUCKET 2.1: Central Bank Physical Gold Accumulation</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 04 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.inquirer.com/business/global-economy-america-debt-dollar-sanctions-gold-wary-investors-bonds-20260920.html" target="_blank" rel="noopener">The world economy is becoming wary of the U.S. - inquirer.com</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-20 • Direct Source: <a href="https://www.inquirer.com/business/global-economy-america-debt-dollar-sanctions-gold-wary-investors-bonds-20260920.html" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.inquirer.com/business/global-economy-america-debt-dollar-sancti...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Russia</span><span class="country-tag">Saudi Arabia</span><span class="country-tag">Iran</span><span class="country-tag">India</span><span class="country-tag">Eurozone/EU</span><span class="country-tag">UAE</span><span class="country-tag">Hong Kong</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> International investors and foreign monetary authorities express mounting unease over unsustainable U.S. debt trajectories, escalating tariff regimes, and the aggressive weaponization of sanctions, accelerating capital allocations into physical gold and non-dollar sovereign debt.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Sovereign Risk-Off Reallocation & Dollar Safe-Haven Erosion (Bucket 2.1):</b> Escalating U.S. fiscal trajectory and policy unpredictability degrade the traditional risk-free premium of U.S. Treasuries, driving foreign balance sheets into physical bullion.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-19</span>
+            <span class="badge-bucket">BUCKET 1.2: International Debt &amp; Sovereign Bond Denomination</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 05 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.tbsnews.net/economy/banking/govt-eyes-first-sovereign-dollar-bond-dec-targets-500m-1b-1545061" target="_blank" rel="noopener">Govt eyes first sovereign dollar bond by Dec, targets $500m-$1b - The Business Standard</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-19 • Direct Source: <a href="https://www.tbsnews.net/economy/banking/govt-eyes-first-sovereign-dollar-bond-dec-targets-500m-1b-1545061" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.tbsnews.net/economy/banking/govt-eyes-first-sovereign-dollar-bo...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Russia</span><span class="country-tag">Japan</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Emerging market sovereign debt authorities are weighing inaugural foreign currency bond issuances, evaluating external financing options between traditional dollar debt and alternative onshore renminbi Panda bonds to mitigate external debt servicing vulnerabilities.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>International Debt & Sovereign Bond Denomination (Bucket 1.2):</b> Emerging market sovereign balance sheets evaluate currency denomination trade-offs between traditional USD debt and renminbi Panda bonds to optimize sovereign borrowing costs and insulate against dollar volatility.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-18</span>
+            <span class="badge-bucket">BUCKET 1.2: International Debt &amp; Sovereign Bond Denomination</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 06 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.businessworld.in/article/bank-of-maharashtra-s-500-mn-overseas-bond-gets-nearly-3x-subscription-624411" target="_blank" rel="noopener">Bank of Maharashtra&#x27;s USD 500M Overseas Bonds Oversubscribed - Rediff MoneyWiz</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-18 • Direct Source: <a href="https://www.businessworld.in/article/bank-of-maharashtra-s-500-mn-overseas-bond-gets-nearly-3x-subscription-624411" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.businessworld.in/article/bank-of-maharashtra-s-500-mn-overseas-...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">United States</span><span class="country-tag">Iran</span><span class="country-tag">India</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Bank of Maharashtra's $500 million debut overseas bond issuance saw nearly 3x oversubscription, reflecting international investor appetite for emerging market financial institution paper backed by Reserve Bank of India foreign exchange swap mechanisms.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>International Debt & Sovereign Bond Denomination (Bucket 1.2):</b> Emerging market institutions utilize overseas bond markets and central bank swap facilities to access diversified foreign capital while managing FX risk.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-17</span>
+            <span class="badge-bucket">BUCKET 2.1: Central Bank Physical Gold Accumulation</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 07 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.cointribune.com/en/china-holds-2366-tons-of-gold-as-yuan-ambitions-grow" target="_blank" rel="noopener">China Holds 2,366 Tons Of Gold As Yuan Ambitions Grow - Cointribune</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-17 • Direct Source: <a href="https://www.cointribune.com/en/china-holds-2366-tons-of-gold-as-yuan-ambitions-grow" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.cointribune.com/en/china-holds-2366-tons-of-gold-as-yuan-ambiti...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Russia</span><span class="country-tag">India</span><span class="country-tag">Hong Kong</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> China's official gold reserves reached 2,366 metric tons following 22 consecutive months of steady purchases, illustrating how Beijing is anchoring the physical foundations of its currency internationalization strategy with un-encumbered hard assets.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Central Bank Physical Gold Accumulation (Bucket 2.1):</b> Long-term institutional re-anchoring of sovereign reserve balance sheets with physical bullion to support credibility in a multipolar currency regime.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-16</span>
+            <span class="badge-bucket">BUCKET 2.5: Deviations from Covered Interest Parity (CIP) &amp; Auction Thinning</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 08 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://protos.com/us-20-year-bond-auction-just-had-its-worst-showing-ever/" target="_blank" rel="noopener">US 20-year bond auction just had its worst showing ever - Cryptonews.net</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-16 • Direct Source: <a href="https://protos.com/us-20-year-bond-auction-just-had-its-worst-showing-ever/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://protos.com/us-20-year-bond-auction-just-had-its-worst-showing-ever/...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">United States</span><span class="country-tag">Brazil</span><span class="country-tag">Japan</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> The U.S. Treasury's September 20-year bond auction experienced historic demand degradation, with primary dealers forced to absorb an unusually large share as foreign indirect bidder participation declined sharply, causing a substantial auction tail.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Deviations from CIP & Treasury Auction Thinning (Bucket 2.5):</b> Diminishing foreign indirect bidder participation in long-duration Treasury auctions demonstrates structural thinning of international demand for expanding U.S. sovereign debt.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-15</span>
+            <span class="badge-bucket">BUCKET 2.1: Central Bank Physical Gold Accumulation</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 09 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.bullionvault.com/gold-news/gold-price-news/gold-central-bank-fed-rates-china-091520261" target="_blank" rel="noopener">Gold Sub-$4300 as Western Bond Yields Soar, China Builds Bullion Reserves - BullionVault</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-15 • Direct Source: <a href="https://www.bullionvault.com/gold-news/gold-price-news/gold-central-bank-fed-rates-china-091520261" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.bullionvault.com/gold-news/gold-price-news/gold-central-bank-fe...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Russia</span><span class="country-tag">Saudi Arabia</span><span class="country-tag">Iran</span><span class="country-tag">UK</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> As Western long-term sovereign bond yields surge amid persistent fiscal deficits, physical gold consolidates near historic highs around $4,300/oz. Concurrently, the People's Bank of China continues expanding its physical bullion reserves, cementing gold as the primary non-Western sovereign reserve anchor.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Central Bank Physical Gold Accumulation (Bucket 2.1):</b> Reallocation of official sovereign reserves from depreciating, sanction-vulnerable Western sovereign paper into physically vaulted, un-freezable gold bullion.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-15</span>
+            <span class="badge-bucket">BUCKET 2.6: Bilateral Swap Networks &amp; Green RMB Bonds</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 10 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.thestar.com.my/news/nation/2026/09/18/maldives-thanks-malaysia-for-considering-us100mil-currency-swap-facility" target="_blank" rel="noopener">Malaysia agrees in principle to US$100mil currency swap with Maldives - nst.com.my</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-15 • Direct Source: <a href="https://www.thestar.com.my/news/nation/2026/09/18/maldives-thanks-malaysia-for-considering-us100mil-currency-swap-facility" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.thestar.com.my/news/nation/2026/09/18/maldives-thanks-malaysia-...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">Iran</span><span class="country-tag">Eurozone/EU</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Malaysia and the Maldives reached an agreement in principle on a $100 million bilateral currency swap facility, providing direct regional liquidity and foreign exchange stability while bypassing intermediate conversions through the U.S. dollar.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Bilateral Swap Networks & Regional Liquidity Backstops (Bucket 2.6):</b> Direct central bank currency swap arrangements insulate small and medium emerging economies from dollar liquidity squeezes.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-15</span>
+            <span class="badge-bucket">BUCKET 1.4: Treasury Convenience Yield &amp; Swap Spread Compression</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 11 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.morningstar.com/economy/dont-panic-about-bond-market-selloff-it-could-be-sign-economic-strength" target="_blank" rel="noopener">Don’t Panic About a US Bond Market Selloff - Morningstar</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-15 • Direct Source: <a href="https://www.morningstar.com/economy/dont-panic-about-bond-market-selloff-it-could-be-sign-economic-strength" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.morningstar.com/economy/dont-panic-about-bond-market-selloff-it...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">United States</span><span class="country-tag">Iran</span><span class="country-tag">Brazil</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Fixed income analysis assesses rising U.S. Treasury yields, with the 30-year bond reaching 19-year highs at 5.3%, evaluating whether elevated yields reflect cyclical growth expectations or structural term premium expansion driven by heavy fiscal issuance.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Treasury Convenience Yield & Swap Spread Compression (Bucket 1.4):</b> Elevation of long-term sovereign bond yields and persistent negative swap spreads signal structural degradation of the Treasury convenience premium.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-13</span>
+            <span class="badge-bucket">BUCKET 2.2: Alternative Clearing Rails (CIPS &amp; Project mBridge)</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 12 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.chinadaily.com.cn/a/202609/13/WS6aa5dd91e4b06d4aa055dc0f.html" target="_blank" rel="noopener">Payment, currency ties to boost BRICS - China Daily</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-13 • Direct Source: <a href="https://www.chinadaily.com.cn/a/202609/13/WS6aa5dd91e4b06d4aa055dc0f.html" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.chinadaily.com.cn/a/202609/13/WS6aa5dd91e4b06d4aa055dc0f.html...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">India</span><span class="country-tag">Brazil</span><span class="country-tag">Indonesia</span><span class="country-tag">South Africa</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Following the 18th BRICS Summit in New Delhi, member states are intensifying cooperation to implement local currency payment systems, interlink domestic instant clearing mechanisms, and reduce transaction reliance on Western financial rails and SWIFT messaging.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Alternative Clearing Rails & Non-SWIFT Messaging (Bucket 2.2):</b> Multilateral integration of national payment switches and clearing rails creates autonomous trade corridors resilient against extraterritorial sanctions.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-12</span>
+            <span class="badge-bucket">BUCKET 1.1: Foreign Exchange Reserve Composition (IMF COFER)</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 13 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.investopedia.com/articles/investing/033115/10-countries-biggest-forex-reserves.asp" target="_blank" rel="noopener">Top 10 Countries With the Biggest Forex Reserves - Investopedia</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-12 • Direct Source: <a href="https://www.investopedia.com/articles/investing/033115/10-countries-biggest-forex-reserves.asp" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.investopedia.com/articles/investing/033115/10-countries-biggest...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">Russia</span><span class="country-tag">Saudi Arabia</span><span class="country-tag">India</span><span class="country-tag">Eurozone/EU</span><span class="country-tag">Japan</span><span class="country-tag">Hong Kong</span><span class="country-tag">UK</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> An analysis of the world's largest sovereign foreign exchange reserve holders, highlighting how top-tier reserve managers (China, Japan, Switzerland, India, Russia, Saudi Arabia) are systematically diversifying reserve asset mixes into gold, regional currencies, and non-dollar assets.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Foreign Exchange Reserve Composition (Bucket 1.1):</b> Global reserve concentration trends show major surplus sovereigns diversifying official assets to reduce vulnerability to single-currency concentration risks.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-11</span>
+            <span class="badge-bucket">BUCKET 2.3: Commodity Invoicing &amp; &#x27;Petroyuan&#x27; Realignment</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 14 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://fortune.com/2026/09/11/oil-prices-hormuz-diplomacy-saudi-arabia-houthis-pakistan-us-bab-al-mandab/" target="_blank" rel="noopener">Oil prices dive on signs of Hormuz diplomacy while Saudi Arabia is left hanging in fight vs. Houthis - Fortune</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-11 • Direct Source: <a href="https://fortune.com/2026/09/11/oil-prices-hormuz-diplomacy-saudi-arabia-houthis-pakistan-us-bab-al-mandab/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://fortune.com/2026/09/11/oil-prices-hormuz-diplomacy-saudi-arabia-hou...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">Saudi Arabia</span><span class="country-tag">Iran</span><span class="country-tag">UAE</span><span class="country-tag">Pakistan</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> HomeLatestFortune 500FinanceTechLeadershipLifestyleRankingsMultimediaTrendingnow1Philanthropy leader at Warren Buffett and Bill Gates’ Giving Pledge says children of billionaires are pushing them to give their wealth away faster2Elon Musk’s DOGE swiped $329 million in humanitaria...</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Monetary Mechanism (Commodity Invoicing & 'Petroyuan' Realignment):</b> Structural shift in sovereign balance sheet composition, cross-border payment messaging infrastructure, or alternative clearing corridors.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-08</span>
+            <span class="badge-bucket">BUCKET 2.3: Commodity Invoicing &amp; &#x27;Petroyuan&#x27; Realignment</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 15 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://energy.economictimes.indiatimes.com/news/oil-and-gas/oil-trades-shift-towards-a-currency-agnostic-future/133903259" target="_blank" rel="noopener">Oil trade’s shift towards a currency-agnostic future - ET EnergyWorld</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-08 • Direct Source: <a href="https://energy.economictimes.indiatimes.com/news/oil-and-gas/oil-trades-shift-towards-a-currency-agnostic-future/133903259" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://energy.economictimes.indiatimes.com/news/oil-and-gas/oil-trades-shi...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">Russia</span><span class="country-tag">Saudi Arabia</span><span class="country-tag">Iran</span><span class="country-tag">India</span><span class="country-tag">UAE</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Global crude oil trade is transitioning toward a currency-agnostic settlement regime as major exporters and importers bypass the traditional petrodollar architecture, settling energy cargoes in local currencies, renminbi, and dirhams.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Commodity Invoicing & 'Petroyuan' Realignment (Bucket 2.3):</b> Structural transition away from mandatory dollar energy pricing, allowing strategic energy trade to clear in sovereign national currencies.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-08</span>
+            <span class="badge-bucket">BUCKET 1.1: Foreign Exchange Reserve Composition (IMF COFER)</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 16 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.europesays.com/3239271/" target="_blank" rel="noopener">Dollar&#x27;s declining reserve share reflects few countries&#x27; choices, not global shift, NY Fed says - 헤럴드경제</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-08 • Direct Source: <a href="https://www.europesays.com/3239271/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.europesays.com/3239271/...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Russia</span><span class="country-tag">India</span><span class="country-tag">Turkey</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> New research from the Federal Reserve Bank of New York argues that the gradual decline in the U.S. dollar's share of global reserves is concentrated in a select group of geopolitical non-aligned and surplus economies, rather than representing an immediate broad-based institutional abandonment of the currency.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Foreign Exchange Reserve Composition & Concentration Dynamics (Bucket 1.1):</b> Structural divergence in sovereign reserve policy, where active de-dollarization is heavily concentrated among geopolitical surplus powers reallocating into gold and bilateral currencies.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-07</span>
+            <span class="badge-bucket">BUCKET 2.1: Central Bank Physical Gold Accumulation</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 17 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://goldsilver.com/industry-news/goldsilver-news/pboc-gold-reserves-august-2026-22-months/" target="_blank" rel="noopener">China Just Broke Its Own Gold-Buying Record. Then Broke It Again. - GoldSilver</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-07 • Direct Source: <a href="https://goldsilver.com/industry-news/goldsilver-news/pboc-gold-reserves-august-2026-22-months/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://goldsilver.com/industry-news/goldsilver-news/pboc-gold-reserves-aug...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Brazil</span><span class="country-tag">Hong Kong</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> The People's Bank of China registered its 22nd consecutive month of physical gold reserve expansion, marking the largest consecutive monthly accumulation streak since 2023. China's official gold holdings reached 2,366 metric tons, reflecting a deliberate, long-term de-dollarization strategy.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Sovereign Reserve Composition & Gold Hedging (Bucket 2.1):</b> Systematic balance-sheet replacement of U.S. Treasury assets with physical bullion, securing monetary reserves against potential foreign exchange asset freezes.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-04</span>
+            <span class="badge-bucket">BUCKET 2.3: Commodity Invoicing &amp; &#x27;Petroyuan&#x27; Realignment</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 18 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.europesays.com/3233377/" target="_blank" rel="noopener">US-Iran Conflict Reignites as Hedge Funds Push Crude Oil Bullish Bets to Highest Since May - finance.biggo.com</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-04 • Direct Source: <a href="https://www.europesays.com/3233377/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.europesays.com/3233377/...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">China</span><span class="country-tag">United States</span><span class="country-tag">Saudi Arabia</span><span class="country-tag">Iran</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Military confrontations between the U.S. and Iran have reignited energy risk premiums, driving hedge funds to establish large bullish bets on crude oil and highlighting the vulnerability of Strait of Hormuz oil transit routes to geopolitical dislocation.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Commodity Invoicing & Geopolitical Risk Hedging (Bucket 2.3):</b> Geopolitical escalation in primary energy export corridors incentivizes energy importers to secure direct bilateral supply agreements settled outside Western clearing channels.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-03</span>
+            <span class="badge-bucket">BUCKET 1.5: Trade Policy Shocks &amp; Tariff Threshold Dynamics</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 19 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.bitget.com/news/detail/12560605781015" target="_blank" rel="noopener">Bitcoin’s gold correlation hits 50% – Can BTC hold its safe-haven edge? - Bitget</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-03 • Direct Source: <a href="https://www.bitget.com/news/detail/12560605781015" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.bitget.com/news/detail/12560605781015...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">United States</span><span class="country-tag">Iran</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> Quantitative correlation between Bitcoin and physical gold reached 50% during recent geopolitical escalations, indicating that digital non-state safe assets are increasingly traded as sovereign debasement hedges alongside physical precious metals.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>Trade Policy Shocks & Tariff Threshold Dynamics (Bucket 1.5):</b> Investors seek non-sovereign monetary alternatives outside the reach of capital controls and tariff regimes during geopolitical conflict.
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="card-header">
+          <div class="card-badges">
+            <span class="badge-date">DATE: 2026-09-01</span>
+            <span class="badge-bucket">BUCKET 1.2: International Debt &amp; Sovereign Bond Denomination</span>
+          </div>
+          <span class="nav-sub">Priority Focus • 20 of 20</span>
+        </div>
+
+        <h3 class="card-title"><a href="https://www.euractiv.com/news/us-tech-bond-bonanza-could-raise-european-borrowing-costs-say-ecb-analysts/" target="_blank" rel="noopener">US tech bond bonanza could raise European borrowing costs, say ECB analysts - euractiv.com</a></h3>
+        <span class="card-meta">Publication Date: 2026-09-01 • Direct Source: <a href="https://www.euractiv.com/news/us-tech-bond-bonanza-could-raise-european-borrowing-costs-say-ecb-analysts/" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none;">https://www.euractiv.com/news/us-tech-bond-bonanza-could-raise-european-bor...</a></span>
+
+        <div class="country-tags-wrap">
+          <span class="country-label">📍 Countries Mentioned:</span>
+          <span class="country-tag">Iran</span><span class="country-tag">Eurozone/EU</span>
+        </div>
+
+        <p class="card-summary"><b>Executive Summary:</b> European Central Bank economists warn that a massive wave of bond sales by U.S. technology giants is crowding out demand for European sovereign debt, driving up borrowing costs across the euro area as private corporate issuers compete directly with G10 sovereign treasuries.</p>
+
+        <div class="card-mechanism">
+          <strong>Underlying Monetary Mechanism</strong>
+          <b>International Debt Denomination & Sovereign Crowding Out (Bucket 1.2):</b> High-yield U.S. corporate debt issuance absorbs global fixed-income duration appetite, compressing foreign absorption of sovereign paper and shifting debt denomination dynamics.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SECTION 05: EXTENDED COVERAGE (FOLLOWING 50) -->
+  <section id="next50">
+    <span class="sec-label">05. Extended Coverage (Following 50 Articles)</span>
+    <h2 class="section-title">Following 50 News Articles: <em>Chronological Reference</em></h2>
+    <p class="section-intro">
+      The table below displays extended coverage across the following 50 articles from the curated corpus, linking directly to canonical publisher source URLs, ordered by publication date (most recent first):
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Indicator Category</th>
+            <th>Countries Mentioned</th>
+            <th>Article Title & Resolved Source Link</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="td-date">2026-09-21</td>
+            <td class="td-bucket">[1.2] International Debt Denomination</td>
+            <td class="td-countries">China, United States, Japan</td>
+            <td class="td-title"><a href="https://streamlinefeed.co.ke/news/oecd-government-debt-record-2026" target="_blank" rel="noopener">OECD government debt heads for record as costs climb - streamlinefeed.co.ke</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-19</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">Brazil</td>
+            <td class="td-title"><a href="https://coinmarketcap.com/academy/article/tokenized-gold-trading-tops-dollar126b-as-wintermute-enters-market" target="_blank" rel="noopener">Tokenized Gold Trading Tops $126B as Wintermute Enters Market - CoinMarketCap</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-19</td>
+            <td class="td-bucket">[1.4] Treasury Yield &amp; Swap Spreads</td>
+            <td class="td-countries">China, United States, Eurozone/EU</td>
+            <td class="td-title"><a href="https://www.tradingview.com/news/stocktwits:951f65fe9094b:0-the-weekly-spread-what-shaped-yields-and-the-dollar-this-week/" target="_blank" rel="noopener">The Weekly Spread: What Shaped Yields And The Dollar This Week - TradingView</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-19</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, India, Brazil (+2)</td>
+            <td class="td-title"><a href="https://telanganatoday.com/honest-money-what-is-india-actually-worth-the-gap-between-what-is-declared-and-what-is-real" target="_blank" rel="noopener">Honest Money: What Is India actually worth—the gap between what is declared and what is real - Telangana Today</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-18</td>
+            <td class="td-bucket">[1.1] FX Reserve Composition</td>
+            <td class="td-countries">China, United States, Russia (+5)</td>
+            <td class="td-title"><a href="https://en.wikipedia.org/wiki/Dedollarisation" target="_blank" rel="noopener">The Truth Behind De-Dollarisation - Daily Observer</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-18</td>
+            <td class="td-bucket">[2.4] Non-USD Stablecoins &amp; Digital Assets</td>
+            <td class="td-countries">China, United States, UAE</td>
+            <td class="td-title"><a href="https://coinmarketcap.com/academy/article/digital-yuan-used-for-first-cross-border-oil-deal-as-chinas-cbdc-adoption-advances" target="_blank" rel="noopener">Digital Yuan Used for First Cross-border Oil Deal, as China’s CBDC Adoption Advances - CoinMarketCap</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-18</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Russia (+3)</td>
+            <td class="td-title"><a href="https://www.sbs.com.au/news/article/why-european-countries-are-moving-gold-out-of-the-us/20uts4dyk" target="_blank" rel="noopener">&#x27;Temper tantrum&#x27;: Why European countries are moving gold out of the US - SBS</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-18</td>
+            <td class="td-bucket">[1.4] Treasury Yield &amp; Swap Spreads</td>
+            <td class="td-countries">China, United States, Russia (+2)</td>
+            <td class="td-title"><a href="https://www.ibtimes.com/china-keeps-shedding-us-sovereign-debt-it-just-hit-18-year-low-3807603" target="_blank" rel="noopener">China Keeps Shedding U.S. Sovereign Debt. It Just Hit An 18-Year Low. - International Business Times</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-18</td>
+            <td class="td-bucket">[2.3] Petroyuan &amp; Commodities</td>
+            <td class="td-countries">China, United States, Russia (+7)</td>
+            <td class="td-title"><a href="https://oilprice.com/Energy/Crude-Oil/Global-Shipping-Costs-Explode-as-Hormuz-Disruptions-Hit-Key-Trade-Routes.html" target="_blank" rel="noopener">Global Shipping Costs Explode as Hormuz Disruptions Hit Key Trade Routes - Crude Oil Prices Today | OilPrice.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-18</td>
+            <td class="td-bucket">[1.1] FX Reserve Composition</td>
+            <td class="td-countries">Brazil, Nigeria</td>
+            <td class="td-title"><a href="https://streamlinefeed.co.ke/news/imf-cautions-central-banks-against-forex-interventions-driven-solely-by-financial-shocks" target="_blank" rel="noopener">IMF Cautions Central Banks Against Forex Interventions Driven Solely by Financial Shocks - streamlinefeed.co.ke</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-17</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, Russia, Iran (+3)</td>
+            <td class="td-title"><a href="https://tribune.com.pk/story/2629866/fed-hikes-rates-gold-challenges-old-rules" target="_blank" rel="noopener">Fed hikes rates, gold challenges old rules - The Express Tribune</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-17</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, India (+2)</td>
+            <td class="td-title"><a href="https://www.inventiva.co.in/trends/where-the-worlds-gold-is-going-and-what-china-india-europe-and-america-know-about-the-next-financial-shock/" target="_blank" rel="noopener">Where The World&#x27;s Gold Is Going And What China, India, Europe And America Know About The Next Financial Shock - inventiva.co.in</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-17</td>
+            <td class="td-bucket">[2.5] CIP Deviations &amp; Treasury Auctions</td>
+            <td class="td-countries">United States</td>
+            <td class="td-title"><a href="https://cryptobriefing.com/us-treasury-69b-2-year-notes-auction/" target="_blank" rel="noopener">US Treasury to sell $69B in 2-year notes as investor appetite for short-term debt holds steady - Crypto Briefing</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-17</td>
+            <td class="td-bucket">[2.7] Institutional Credibility &amp; Governance</td>
+            <td class="td-countries">China, United States, Russia (+3)</td>
+            <td class="td-title"><a href="https://voz.us/en/politics/260917/39169/donald-trump-calls-for-an-urgent-cut-in-interest-rates-to-1-following-the-federal-reserve-s-historic-decision.html" target="_blank" rel="noopener">Donald Trump calls for urgent cut in interest rates to 1% following Federal Reserve&#x27;s historic decision - voz.us</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-17</td>
+            <td class="td-bucket">[1.4] Treasury Yield &amp; Swap Spreads</td>
+            <td class="td-countries">China, United States, Russia (+6)</td>
+            <td class="td-title"><a href="https://chinaglobalsouth.com/2026/09/18/pakistan-china-currency-swap-us-financing/" target="_blank" rel="noopener">Pakistan eyes bigger China swap line, expects US financing decision soon - The Lufkin Daily News</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-16</td>
+            <td class="td-bucket">[2.6] Bilateral Swaps &amp; Green RMB Bonds</td>
+            <td class="td-countries">China, United States, Hong Kong</td>
+            <td class="td-title"><a href="https://www.scmp.com/business/banking-finance/article/3359981/how-rmb-business-facility-will-help-consolidate-hong-kongs-financial-role" target="_blank" rel="noopener">2026 Policy Address | The quota for RMB business funding arrangements is expanded to 500 billion yuan - Longbridge</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-16</td>
+            <td class="td-bucket">[2.7] Institutional Credibility &amp; Governance</td>
+            <td class="td-countries">Hong Kong</td>
+            <td class="td-title"><a href="https://www.hiiraan.com/op4/2026/Sep/206281/a_credible_somali_shilling_requires_rules_reserves_and_trust_a_practitioners_recommendation_for_establishing_a_somali_currency_board.aspx" target="_blank" rel="noopener">A Credible Somali Shilling Requires Rules, Reserves and Trust. A practitioner’s recommendation for establishing a Somali currency board - Hiiraan Online</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-15</td>
+            <td class="td-bucket">[2.3] Petroyuan &amp; Commodities</td>
+            <td class="td-countries">China, United States, Russia (+4)</td>
+            <td class="td-title"><a href="https://abcnews.com/Business/unrest-strait-hormuz-leading-rising-oil-gasoline-prices/story?id=130723855" target="_blank" rel="noopener">Why unrest in the Strait of Hormuz is leading to rising oil and gasoline prices - abcnews.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-15</td>
+            <td class="td-bucket">[1.1] FX Reserve Composition</td>
+            <td class="td-countries">China, United States, Saudi Arabia (+5)</td>
+            <td class="td-title"><a href="https://www.cfr.org/articles/de-reservification-not-de-dollarization" target="_blank" rel="noopener">De-reservification, Not De-dollarization - Council on Foreign Relations</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-15</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, Brazil</td>
+            <td class="td-title"><a href="https://coinpaper.com/35773/bitcoin-vs-gold-during-war-abd-crises-which-is-the-better-safe-haven" target="_blank" rel="noopener">Bitcoin vs Gold During War abd Crises: Which Is the Better Safe Haven? - Coinpaper</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-15</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, Saudi Arabia</td>
+            <td class="td-title"><a href="https://pluang.com/en/news-feed/emas-untuk-kedaulatan-treasury-as-untuk-likuiditas-hedge-komplementer" target="_blank" rel="noopener">US Treasuries remain irreplaceable for liquidit... - Pluang</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-14</td>
+            <td class="td-bucket">[2.2] Alternative Rails (CIPS/mBridge)</td>
+            <td class="td-countries">United States, Russia, Brazil (+3)</td>
+            <td class="td-title"><a href="https://streamlinefeed.co.ke/news/asean-local-currency-settlement-de-dollarization-bilateral-trade-2026" target="_blank" rel="noopener">ASEAN Local Currency Settlement and De-Dollarization: The Quiet Operational Revolution in Cross-Border Regional Payments - streamlinefeed.co.ke</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-13</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, Iran, UK</td>
+            <td class="td-title"><a href="https://www.theguardian.com/world/2026/sep/03/netherlands-gold-dutch-central-bank-uk-us-and-canada-geopolitical-unrest" target="_blank" rel="noopener">DW News. . The Dutch central bank has moved 86 tons of its gold reserves out of New York and Ottawa and into London, in an operation that ran from March to August. It cited increasing geopolitical unrest, and said gold held in London can be traded faster tha - facebook.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-13</td>
+            <td class="td-bucket">[2.2] Alternative Rails (CIPS/mBridge)</td>
+            <td class="td-countries">China, Eurozone/EU, Hong Kong (+1)</td>
+            <td class="td-title"><a href="https://thefintechtimes.com/hong-kong-maps-3-5-second-bond-clearing-path-in-2030-digital-hub-plan/" target="_blank" rel="noopener">Hong Kong Maps 3.5-Second Bond Clearing Path in 2030 Digital Hub Plan - The Fintech Times</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-12</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">UK</td>
+            <td class="td-title"><a href="https://www.europesays.com/3246312/" target="_blank" rel="noopener">Central Banks and Ultra-Wealthy Accelerate Gold Buying in Q2 as Faith in U.S. Treasuries Wavers - finance.biggo.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-12</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, Iran, Eurozone/EU (+2)</td>
+            <td class="td-title"><a href="https://www.dw.com/en/why-are-european-banks-moving-gold-out-of-united-states/a-79213013" target="_blank" rel="noopener">Why are European banks moving gold out of United States? - DW.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-11</td>
+            <td class="td-bucket">[2.6] Bilateral Swaps &amp; Green RMB Bonds</td>
+            <td class="td-countries">United States, India</td>
+            <td class="td-title"><a href="https://github.com/arunachalamvenkatachalapathy-dev/linkedin-vis/issues/52" target="_blank" rel="noopener">Issuing For Impact: A Framework For ESG Debt Securities In India - Debt Capital Markets - India - Mondaq</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-11</td>
+            <td class="td-bucket">[1.5] Trade Policy &amp; Tariffs</td>
+            <td class="td-countries">China, United States, UK</td>
+            <td class="td-title"><a href="https://www.dailywire.com/news/the-self-harming-logic-of-the-u-s-canada-trade-war" target="_blank" rel="noopener">The Self-Harming Logic Of The U.S.-Canada Trade War - The Daily Wire</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-11</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">India, UAE, Indonesia</td>
+            <td class="td-title"><a href="https://businessnews.lk/2026/09/16/central-banks-reconsider-how-to-manage-foreign-reserves-as-global-risks-change/" target="_blank" rel="noopener">Central bank reserves need bigger buffers and sharper judgement: AIIB - Daily FT</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-10</td>
+            <td class="td-bucket">[2.2] Alternative Rails (CIPS/mBridge)</td>
+            <td class="td-countries">China, United States, Turkey</td>
+            <td class="td-title"><a href="https://us.headtopics.com/news/aktif-bank-joins-china-s-cips-enhancing-yuan-payments-87566198" target="_blank" rel="noopener">Turkish lenders enter China’s yuan payment system as Aktif Bank joins CIPS - Türkiye Today</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-09</td>
+            <td class="td-bucket">[2.3] Petroyuan &amp; Commodities</td>
+            <td class="td-countries">United States, Iran, Brazil (+1)</td>
+            <td class="td-title"><a href="https://stocktwits.com/news-articles/markets/equity/iran-mulls-transit-fees-strait-of-hormuz-crude-oil-prices-surge/cZ3aLtfRIWw" target="_blank" rel="noopener">Iran Reportedly Mulls Transit Fees In Strait Of Hormuz, Targeting A Fifth Of Global Energy Flow As Crude Oil Surges - Stocktwits</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-09</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, UK</td>
+            <td class="td-title"><a href="https://www.bernama.com/en/world/news.php?id=2604993" target="_blank" rel="noopener">European Gold Shifts Highlight Concerns Over US Reserve Security, Geopolitical Risks - Bernama</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-08</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">United States, Brazil</td>
+            <td class="td-title"><a href="https://www.kitco.com/opinion/2026-09-08/gold-15000-fantasy-forecast-or-warning" target="_blank" rel="noopener">Gold at $15,000: Fantasy, forecast - or warning? - KITCO</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-08</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Russia (+2)</td>
+            <td class="td-title"><a href="https://ua.news/en/world/kitai-zbilshiv-zoloti-rezervi-do-76-73-mln-untsii" target="_blank" rel="noopener">China increased gold reserves to 76.73 million ounces - UA.NEWS</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-08</td>
+            <td class="td-bucket">[1.3] Trade Finance &amp; SWIFT/BIS</td>
+            <td class="td-countries">United States, UK, Nigeria</td>
+            <td class="td-title"><a href="https://streamlinefeed.co.ke/news/london-fintech-slashes-friction-on-sluggish-ngn-gbp-trade-corridor" target="_blank" rel="noopener">London Fintech Slashes Friction on Sluggish NGN-GBP Trade Corridor - streamlinefeed.co.ke</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-08</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Russia (+2)</td>
+            <td class="td-title"><a href="https://timesofindia.indiatimes.com/business/india-business/gold-soars-but-china-keeps-buying-peoples-bank-of-china-adds-650000-ounces-in-august-biggest-monthly-increase-in-nearly-3-years-extends-buying-streak-to-22-months/articleshow/133917574.cms" target="_blank" rel="noopener">Gold soars, but China keeps buying: People&#x27;s Bank of China adds 650,000 ounces in August, biggest monthly - The Times of India</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-08</td>
+            <td class="td-bucket">[1.2] International Debt Denomination</td>
+            <td class="td-countries">United States, Japan</td>
+            <td class="td-title"><a href="http://www.jpost.com/business-and-innovation/banking-and-finance/article-907923" target="_blank" rel="noopener">America’s black hole: The debt threatening to swallow the global economy - The Jerusalem Post</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-07</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Brazil (+1)</td>
+            <td class="td-title"><a href="https://goldsilver.com/industry-news/goldsilver-news/central-banks-gold-repatriation-comex-storage-2026/" target="_blank" rel="noopener">Central Bank Gold Repatriation: A New Trend - GoldSilver</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-06</td>
+            <td class="td-bucket">[2.6] Bilateral Swaps &amp; Green RMB Bonds</td>
+            <td class="td-countries">China, United States, South Africa</td>
+            <td class="td-title"><a href="https://english.news.cn/africa/20260906/48c0c70a4698423c8032ed1ac9e1f14f/c.html" target="_blank" rel="noopener">Xinhua Headlines: RMB use expands in Africa amid growing financial connectivity and trade - Xinhua</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-04</td>
+            <td class="td-bucket">[2.3] Petroyuan &amp; Commodities</td>
+            <td class="td-countries">Russia, Iran</td>
+            <td class="td-title"><a href="https://russiancouncil.ru/en/analytics-and-comments/analytics/the-hormuz-paradox-how-the-crisis-is-reshaping-the-energy-geography-of-the-middle-east/" target="_blank" rel="noopener">The Hormuz Paradox: How the Crisis Is Reshaping the Energy Geography of the Middle East - Российский совет по международным делам</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-03</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Iran (+1)</td>
+            <td class="td-title"><a href="https://www.morningstar.com/markets/whats-next-gold-prices-after-latest-rebound" target="_blank" rel="noopener">What’s Next for Gold Prices After the Latest Rebound? - Morningstar</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-03</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Iran (+2)</td>
+            <td class="td-title"><a href="https://www.aljazeera.com/news/2026/9/3/why-has-the-netherlands-moved-10bn-of-its-gold-from-the-us" target="_blank" rel="noopener">Why has the Netherlands moved $10bn of its gold from the US? - Al Jazeera</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-03</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, United States, Russia (+4)</td>
+            <td class="td-title"><a href="https://www.newsweek.com/list-of-countries-that-have-pulled-gold-from-us-federal-reserve-12398243" target="_blank" rel="noopener">List of Countries That Have Pulled Gold From US Federal Reserve - Newsweek</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-03</td>
+            <td class="td-bucket">[1.2] International Debt Denomination</td>
+            <td class="td-countries">United States, Saudi Arabia, Iran</td>
+            <td class="td-title"><a href="https://english.aawsat.com/business/5314429-saudi-debt-market-gathers-pace-sovereign-bank-and-corporate-borrowing-converges" target="_blank" rel="noopener">Saudi Debt Market Gathers Pace as Sovereign, Bank and Corporate Borrowing Converges - ASHARQ AL-AWSAT English</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-02</td>
+            <td class="td-bucket">[2.7] Institutional Credibility &amp; Governance</td>
+            <td class="td-countries">United States</td>
+            <td class="td-title"><a href="https://www.theglobeandmail.com/business/commentary/article-central-bank-independence-limit-federal-reserve-bank-of-canada/" target="_blank" rel="noopener">Opinion: Central bank independence should have a limit - The Globe and Mail</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-09-02</td>
+            <td class="td-bucket">[2.4] Non-USD Stablecoins &amp; Digital Assets</td>
+            <td class="td-countries">United States, Brazil</td>
+            <td class="td-title"><a href="https://www.bankingdive.com/news/stablecoins-lose-ground-tokenized-deposits-jackson-hole-hernandez-ed-cos/829457/" target="_blank" rel="noopener">Stablecoins lose ground to tokenized deposits - bankingdive.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-08-31</td>
+            <td class="td-bucket">[1.4] Treasury Yield &amp; Swap Spreads</td>
+            <td class="td-countries">United States, Japan</td>
+            <td class="td-title"><a href="https://insurancenewsnet.com/oarticle/usd-jpy-trading-in-2026-why-rising-us-yields-matter-which-brokers-fit-your-strategy" target="_blank" rel="noopener">USD/JPY Trading in 2026: Why Rising US Yields Matter &amp; Which Brokers Fit Your Strategy - DailyForex</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-08-31</td>
+            <td class="td-bucket">[1.4] Treasury Yield &amp; Swap Spreads</td>
+            <td class="td-countries">United States, Iran, Eurozone/EU</td>
+            <td class="td-title"><a href="https://www.europesays.com/europe/127490/" target="_blank" rel="noopener">Warsh Strikes Hawkish Tone at Jackson Hole, German Bond Yields Surge to Decade-Plus Highs - finance.biggo.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-08-31</td>
+            <td class="td-bucket">[1.4] Treasury Yield &amp; Swap Spreads</td>
+            <td class="td-countries">United States, Iran, Brazil (+1)</td>
+            <td class="td-title"><a href="https://www.bitget.com/news/detail/12560605755237" target="_blank" rel="noopener">US-Iran War Drives Up Sovereign Bond Yields, Adding Over $16 Billion in Financing Costs for G7 - finance.biggo.com</a></td>
+          </tr>
+
+          <tr>
+            <td class="td-date">2026-08-30</td>
+            <td class="td-bucket">[2.1] Central Bank Physical Gold</td>
+            <td class="td-countries">China, India, Brazil (+3)</td>
+            <td class="td-title"><a href="https://www.asiaasset.com/analysis/amid-a-shift-in-demand-jurisdictions-jostle-to-become-asias-gold-hub/" target="_blank" rel="noopener">Amid a shift in demand, jurisdictions jostle to become Asia’s gold hub - Asia Asset Management</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap--wide">
+    <span>&copy; 2026 Merlin Intelligence. Geoeconomic Knowledge Infrastructure.</span>
+    <span>Generated by Merlin Intelligence Pipeline</span>
+  </div>
+</footer>
+
+</body>
+</html>
