@@ -1,0 +1,65 @@
+# Example project: monitoring AI regulation news.
+# Copy this file (or run `python -m newsintel init <name>`) to start a new topic.
+
+project:
+  name: ai_regulation
+  title: "AI Regulation Watch"
+  # Plain-language description of the topic: drives the relevance score.
+  description: >
+    Laws, regulations, enforcement actions and standards governing artificial
+    intelligence: AI acts, safety institutes, compliance obligations, liability,
+    copyright and data protection rules applied to AI models and their providers.
+
+seeds:
+  file: inputs/seeds_ai_regulation.csv
+
+# Terms whose frequency boosts relevance (optional).
+keywords:
+  - AI Act
+  - AI regulation
+  - AI safety
+  - foundation model
+  - compliance
+  - regulator
+
+# Articles are classified into the closest category; every category gets at
+# least one top story when ensure_category_coverage is on.
+categories:
+  - id: legislation
+    name: Legislation & rule-making
+    description: AI Act, bill, law, parliament, congress, senate, draft regulation, rule-making, implementing act, delegated act, codes of practice, legislative vote.
+  - id: enforcement
+    name: Enforcement & litigation
+    description: regulator investigation, fine, penalty, lawsuit, court ruling, injunction, data protection authority, antitrust probe, consent decree, enforcement action against AI companies.
+  - id: safety
+    name: Safety & standards
+    description: AI safety institute, model evaluation, red teaming, frontier model risk, technical standards, ISO, NIST framework, audits, incident reporting, watermarking.
+  - id: copyright
+    name: Copyright & data
+    description: copyright infringement, training data, licensing deals, publishers, authors, artists, text and data mining exception, personal data, privacy, GDPR applied to AI training.
+  - id: industry
+    name: Industry response
+    description: companies, compliance cost, lobbying, voluntary commitments, open-source models, startups, product launches delayed or withdrawn because of regulation.
+
+# Tags detected by regular expression (case-insensitive, optional).
+entities:
+  European Union: ['\beu\b', 'european (union|commission|parliament)', '\bbrussels\b']
+  United States: ['\bu\.s\.', 'united states', 'white house', '\bcongress\b', '\bftc\b']
+  United Kingdom: ['\buk\b', 'united kingdom', '\bbritain\b', '\bofcom\b']
+  China: ['\bchina\b', '\bchinese\b', '\bbeijing\b', '\bcac\b']
+
+harvest:
+  channels: [google_news]   # add brave_news, brave_web or a site channel (needs BRAVE_API_KEY)
+  days: 14
+  max_results_per_seed: 20
+  google_news:
+    language: en
+    country: US
+
+extraction:
+  engine: playwright        # or "requests": faster, no browser, fails on JS-heavy sites
+  workers: 8
+
+selection:
+  top_n: 15
+  next_n: 40

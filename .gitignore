@@ -1,12 +1,13 @@
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*.egg-info/
+.pytest_cache/
 .venv/
+venv/
 env/
+.env
 .DS_Store
 *.log
-news_*_scrapes.csv
-news_*_checkpoint.csv
-news_*_fulltext.csv
-news_*_resolved.csv
-scratch/
+
+# Pipeline outputs
+runs/
