@@ -61,12 +61,11 @@ Or do all of the above from the web interface:
 python -m newsintel ui             # opens http://localhost:8501
 ```
 
-Two example projects are included:
-
+An example project is included:
+ 
 | Config | Topic |
 |---|---|
-| [configs/ai_regulation.yaml](configs/ai_regulation.yaml) | AI regulation (Google News only, no key needed) |
-| [configs/dedollarization.yaml](configs/dedollarization.yaml) | De-dollarization: the original use case (12 categories, Brave + LinkedIn) |
+| [configs/ai_regulation.yaml](configs/ai_regulation.yaml) | AI regulation (Google News, Brave + LinkedIn) |
 
 Once the package is installed (`pip install -e .`), the `newsintel` command replaces `python -m newsintel`.
 
