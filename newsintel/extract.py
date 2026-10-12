@@ -12,6 +12,7 @@ from __future__ import annotations
 import asyncio
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
@@ -103,7 +104,29 @@ async def _run_playwright(jobs: dict[str, str], cfg: ExtractionConfig, on_result
         await browser.close()
 
 
-def extract(df: pd.DataFrame, cfg: ExtractionConfig, checkpoint: Path | None = None) -> pd.DataFrame:
+def filter_by_age(df: pd.DataFrame, days: int) -> pd.DataFrame:
+    """Discard articles whose resolved published_at is older than `days`."""
+    if df.empty or days <= 0 or "published_at" not in df.columns:
+        return df
+    ref = pd.to_datetime(df["harvested_at"], errors="coerce").max() if "harvested_at" in df.columns else pd.NaT
+    if pd.isna(ref):
+        ref = datetime.now(timezone.utc)
+    cutoff = (ref - timedelta(days=days)).date().isoformat()
+    pub_dates = df["published_at"].fillna("").astype(str).str.strip().str[:10]
+    too_old = (pub_dates != "") & (pub_dates < cutoff)
+    if too_old.any():
+        n = int(too_old.sum())
+        log.info("Discarded %d articles older than %d days (published before %s)", n, days, cutoff)
+        return df[~too_old].reset_index(drop=True)
+    return df
+
+
+def extract(
+    df: pd.DataFrame,
+    cfg: ExtractionConfig,
+    checkpoint: Path | None = None,
+    days: int | None = None,
+) -> pd.DataFrame:
     done: dict[str, dict] = {}
     if checkpoint and checkpoint.exists():
         prev = read_csv(checkpoint)
@@ -149,4 +172,6 @@ def extract(df: pd.DataFrame, cfg: ExtractionConfig, checkpoint: Path | None = N
     out = out.drop(columns=["page_date"])
     counts = out["extraction_status"].value_counts().to_dict()
     log.info("Extraction: %s", ", ".join(f"{k}={v}" for k, v in counts.items()))
+    if days is not None and days > 0:
+        out = filter_by_age(out, days)
     return out

@@ -49,12 +49,19 @@ entities:
   China: ['\bchina\b', '\bchinese\b', '\bbeijing\b', '\bcac\b']
 
 harvest:
-  channels: [google_news]   # add brave_news, brave_web or a site channel (needs BRAVE_API_KEY)
+  channels: [google_news, brave_news, brave_web, linkedin_pulse, linkedin_posts]
   days: 14
   max_results_per_seed: 20
   google_news:
     language: en
     country: US
+  brave:
+    count: 3
+    site_channels:
+      - name: linkedin_pulse
+        site: linkedin.com/pulse/
+      - name: linkedin_posts
+        site: linkedin.com/posts/
 
 extraction:
   engine: playwright        # or "requests": faster, no browser, fails on JS-heavy sites

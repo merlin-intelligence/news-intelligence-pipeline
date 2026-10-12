@@ -119,16 +119,16 @@ class Pipeline:
         from newsintel.extract import extract
 
         checkpoint = self.run_dir / "articles.partial.csv"
-        df = extract(self._load("harvest"), self.cfg.extraction, checkpoint)
+        df = extract(self._load("harvest"), self.cfg.extraction, checkpoint, days=self.cfg.harvest.days)
         write_csv(df, self.path("extract"))
         checkpoint.unlink(missing_ok=True)
 
     def score(self) -> None:
-        from newsintel.scoring import score
+        from newsintel.extract import filter_by_age
+        from newsintel.scoring import save_similarity, score
 
-        from newsintel.scoring import save_similarity
-
-        result = score(self._load("extract"), self.cfg)
+        articles = filter_by_age(self._load("extract"), self.cfg.harvest.days)
+        result = score(articles, self.cfg)
         save_similarity(self.run_dir / SIMILARITY, result.articles["article_id"], result.similarity)
         write_csv(result.articles.drop(columns=TEXT_COLUMNS, errors="ignore"), self.path("score"))
 

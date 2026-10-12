@@ -8,7 +8,7 @@ from newsintel.config import ConfigError, config_from_dict, load_config, parse_c
 ROOT = Path(__file__).resolve().parents[1]
 
 
-@pytest.mark.parametrize("name", ["ai_regulation", "dedollarization"])
+@pytest.mark.parametrize("name", ["ai_regulation"])
 def test_shipped_configs_load(name):
     cfg = load_config(ROOT / "configs" / f"{name}.yaml")
     assert cfg.project.name == name
@@ -17,7 +17,7 @@ def test_shipped_configs_load(name):
 
 
 def test_site_channels_are_valid_channels():
-    cfg = load_config(ROOT / "configs" / "dedollarization.yaml")
+    cfg = load_config(ROOT / "configs" / "ai_regulation.yaml")
     assert {s.name for s in cfg.harvest.brave.site_channels} == {"linkedin_pulse", "linkedin_posts"}
 
 

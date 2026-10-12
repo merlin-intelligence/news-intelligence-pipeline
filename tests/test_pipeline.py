@@ -1,5 +1,6 @@
 import json
 
+import pandas as pd
 import pytest
 
 from newsintel.cli import main
@@ -64,3 +65,28 @@ def test_cli_init_and_validate(tmp_path, monkeypatch, capsys):
     assert main(["init", "city_transport"]) == 1  # refuses to overwrite
     assert main(["validate", "-c", "configs/city_transport.yaml"]) == 0
     assert "seeds: 2" in capsys.readouterr().out
+
+
+def test_filter_by_age(articles):
+    from newsintel.extract import filter_by_age
+
+    df = articles.copy()
+    # Articles in fixture have published_at: 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-04
+    # and harvested_at: 2026-10-10 10:00:00
+    # Add an older article (e.g. 2026-08-15) and an undated article ("")
+    old_row = df.iloc[0].copy()
+    old_row["article_id"] = "old123"
+    old_row["published_at"] = "2026-08-15"
+
+    undated_row = df.iloc[0].copy()
+    undated_row["article_id"] = "undated123"
+    undated_row["published_at"] = ""
+
+    df = pd.concat([df, pd.DataFrame([old_row, undated_row])], ignore_index=True)
+
+    # 7 days back from 2026-10-10 is cutoff 2026-10-03:
+    # 2026-08-15 (< cutoff), 2026-10-01 (< cutoff), 2026-10-02 (< cutoff) should be dropped
+    filtered = filter_by_age(df, days=7)
+    assert "old123" not in filtered["article_id"].values
+    assert "undated123" in filtered["article_id"].values
+    assert all(d >= "2026-10-03" for d in filtered["published_at"] if d != "")
